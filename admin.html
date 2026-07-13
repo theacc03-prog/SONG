@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administração | Grand Hôtel Lumière</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Old+Standard+TT&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/hospedes.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="nav-bar">
+        <div class="nav-brand">
+            <img src="assets/img/logo-dourado.png" alt="Grand Hôtel Lumière" style="height:34px;">
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Início</a>
+            <a href="hotel.html">Hotel</a>
+            <a href="paris.html">Paris</a>
+            <a href="mercado.html">Mercado</a>
+            <a href="jornal.html">Jornal</a>
+            <a href="funcionamento.html">Funcionamento</a>
+            <a href="hospedes.html">Hóspedes</a>
+            <a href="admin.html" id="nav-admin-link" class="hidden">Admin</a>
+        </nav>
+        <div style="display:flex; align-items:center; gap:14px;">
+            <button class="nav-account" id="nav-account">Entrar</button>
+            <button class="nav-toggle" id="nav-toggle">Menu</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <span class="script">Nos bastidores</span>
+        <h1>Administração</h1>
+        <p>Manutenção e monitoramento do Grand Hôtel Lumière — acesso restrito à direção.</p>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <div id="admin-login-gate" class="card ornate-frame center hidden">
+                <span class="corner-bl"></span><span class="corner-br"></span>
+                <h3>Identifique-se</h3>
+                <p class="subtle">Entre com sua conta de hóspede para continuar.</p>
+                <a class="btn" href="auth.html">Entrar</a>
+            </div>
+
+            <div id="admin-negado-gate" class="card ornate-frame center hidden">
+                <span class="corner-bl"></span><span class="corner-br"></span>
+                <h3>Acesso restrito</h3>
+                <p class="subtle">Esta área é reservada à direção do Grand Hôtel Lumière. Sua conta não tem permissão de administração.</p>
+            </div>
+
+            <div id="admin-content" class="hidden">
+
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-admin-tab="hospedes">Hóspedes</button>
+                    <button class="admin-tab" data-admin-tab="jornal">Jornal</button>
+                    <button class="admin-tab" data-admin-tab="mercado">Mercado</button>
+                    <button class="admin-tab" data-admin-tab="conteudo">Conteúdo</button>
+                    <button class="admin-tab" data-admin-tab="permissoes">Permissões</button>
+                </div>
+
+                <!-- HOSPEDES -->
+                <div class="admin-painel active" data-admin-painel="hospedes">
+                    <div class="admin-secao-titulo">
+                        <h3 style="margin:0;">Hóspedes registrados</h3>
+                        <span class="subtle" id="admin-hospedes-contagem"></span>
+                    </div>
+                    <div id="admin-hospedes-list"></div>
+                </div>
+
+                <!-- JORNAL -->
+                <div class="admin-painel" data-admin-painel="jornal">
+                    <h3>Nova edição</h3>
+                    <div class="admin-form">
+                        <label for="jn-categoria">Categoria</label>
+                        <input type="text" id="jn-categoria" placeholder="Manchete, Fofoca, Anúncio...">
+                        <label for="jn-titulo">Título</label>
+                        <input type="text" id="jn-titulo" placeholder="Título da matéria">
+                        <label for="jn-autor">Autor</label>
+                        <input type="text" id="jn-autor" placeholder="Redação">
+                        <label for="jn-resumo">Texto</label>
+                        <textarea id="jn-resumo" rows="4" placeholder="Conteúdo da matéria..."></textarea>
+                        <button class="btn form-wide" id="jn-publicar">Publicar edição</button>
+                    </div>
+
+                    <div class="admin-secao-titulo">
+                        <h3 style="margin:0;">Edições publicadas</h3>
+                    </div>
+                    <div id="admin-jornal-list"></div>
+                </div>
+
+                <!-- MERCADO -->
+                <div class="admin-painel" data-admin-painel="mercado">
+                    <div class="admin-secao-titulo">
+                        <h3 style="margin:0;">Saldo dos hóspedes</h3>
+                    </div>
+                    <div id="admin-saldo-list"></div>
+
+                    <div class="admin-secao-titulo" style="margin-top:44px;">
+                        <h3 style="margin:0;">Novo item à venda</h3>
+                    </div>
+                    <div class="admin-form">
+                        <label for="mk-nome">Nome do item</label>
+                        <input type="text" id="mk-nome" placeholder="Leque de renda">
+                        <label for="mk-preco">Preço (Francos)</label>
+                        <input type="number" id="mk-preco" placeholder="0">
+                        <label for="mk-descricao">Descrição</label>
+                        <textarea id="mk-descricao" rows="3" placeholder="Descrição do item..."></textarea>
+                        <button class="btn form-wide" id="mk-adicionar">Adicionar ao catálogo</button>
+                    </div>
+
+                    <div class="admin-secao-titulo">
+                        <h3 style="margin:0;">Catálogo atual</h3>
+                    </div>
+                    <div id="admin-itens-list"></div>
+                </div>
+
+                <!-- CONTEUDO -->
+                <div class="admin-painel" data-admin-painel="conteudo">
+                    <div class="admin-secao-titulo">
+                        <h3 style="margin:0;">Textos do site</h3>
+                        <span class="subtle">Edite os textos abaixo para substituir o padrão em cada página. Restaurar volta ao texto original.</span>
+                    </div>
+                    <div id="admin-conteudo-list"></div>
+                </div>
+
+                <!-- PERMISSOES -->
+                <div class="admin-painel" data-admin-painel="permissoes">
+                    <div class="admin-secao-titulo">
+                        <h3 style="margin:0;">Administradores</h3>
+                        <span class="subtle">Promova ou remova o acesso administrativo de um hóspede.</span>
+                    </div>
+                    <div id="admin-permissoes-list"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<div id="modal-root"></div>
+
+<footer class="site-footer">
+    <div>Grand Hôtel Lumière — Paris, 1850</div>
+    <div class="site-credito">Site desenvolvido por Powder Design</div>
+</footer>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/conteudo.js"></script>
+<script type="module" src="js/admin.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>
