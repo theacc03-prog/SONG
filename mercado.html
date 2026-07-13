@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercado | Grand Hôtel Lumière</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Old+Standard+TT&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body data-require-auth="true">
+
+<header class="site-header">
+    <div class="nav-bar">
+        <div class="nav-brand">
+            <img src="assets/img/logo-dourado.png" alt="Grand Hôtel Lumière" style="height:34px;">
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Início</a>
+            <a href="hotel.html">Hotel</a>
+            <a href="paris.html">Paris</a>
+            <a href="mercado.html">Mercado</a>
+            <a href="jornal.html">Jornal</a>
+            <a href="funcionamento.html">Funcionamento</a>
+            <a href="hospedes.html">Hóspedes</a>
+            <a href="admin.html" id="nav-admin-link" class="hidden">Admin</a>
+        </nav>
+        <div style="display:flex; align-items:center; gap:14px;">
+            <button class="nav-account" id="nav-account">Entrar</button>
+            <button class="nav-toggle" id="nav-toggle">Menu</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <span class="script">Assuntos privados</span>
+        <h1>Mercado</h1>
+        <p data-edit-key="mercado-subtitulo">A vida financeira da alta sociedade parisiense — acessível apenas a hóspedes registrados.</p>
+    </section>
+
+    <section>
+        <div class="container">
+
+            <div id="auth-gate" class="card ornate-frame center">
+                <span class="corner-bl"></span><span class="corner-br"></span>
+                <h3>Acesso restrito</h3>
+                <p class="subtle">Você precisa entrar com sua conta de hóspede para acessar o Mercado.</p>
+                <a class="btn" href="auth.html">Entrar</a>
+            </div>
+
+            <div id="gated-content" class="hidden">
+                <div class="card" style="text-align:center; margin-bottom:26px;">
+                    <p class="subtle">Saldo disponível</p>
+                    <div id="mercado-saldo" style="font-family:var(--fonte-plaqueta); letter-spacing:2px; font-size:2.2rem; color:var(--tinta);">0 Francos</div>
+                </div>
+                <h3>Itens à venda</h3>
+                <div id="mercado-itens" class="grid"></div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div>Grand Hôtel Lumière — Paris, 1850</div>
+    <div class="site-credito">Site desenvolvido por Powder Design</div>
+</footer>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/conteudo.js"></script>
+<script type="module" src="js/mercado.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>

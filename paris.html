@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paris | Grand Hôtel Lumière</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Old+Standard+TT&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="nav-bar">
+        <div class="nav-brand">
+            <img src="assets/img/logo-dourado.png" alt="Grand Hôtel Lumière" style="height:34px;">
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Início</a>
+            <a href="hotel.html">Hotel</a>
+            <a href="paris.html">Paris</a>
+            <a href="mercado.html">Mercado</a>
+            <a href="jornal.html">Jornal</a>
+            <a href="funcionamento.html">Funcionamento</a>
+            <a href="hospedes.html">Hóspedes</a>
+            <a href="admin.html" id="nav-admin-link" class="hidden">Admin</a>
+        </nav>
+        <div style="display:flex; align-items:center; gap:14px;">
+            <button class="nav-account" id="nav-account">Entrar</button>
+            <button class="nav-toggle" id="nav-toggle">Menu</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <span class="script">Além das portas do hotel</span>
+        <h1>Paris</h1>
+        <p data-edit-key="paris-subtitulo">A cidade luz se estende para além do Grand Hôtel Lumière — cafés, teatros e boutiques esperam por quem ousa explorar.</p>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="grid">
+                <div class="card"><h3>Cafés</h3><p class="subtle">Conversas, fofocas e encontros discretos.</p></div>
+                <div class="card"><h3>Teatros</h3><p class="subtle">Espetáculos que rivalizam com os dramas reais da alta sociedade.</p></div>
+                <div class="card"><h3>Boutiques</h3><p class="subtle">Moda, seda e vaidade parisiense.</p></div>
+                <div class="card"><h3>Perfumarias</h3><p class="subtle">Fragrâncias exclusivas, criadas sob encomenda.</p></div>
+                <div class="card"><h3>Bancos</h3><p class="subtle">Onde fortunas mudam de mãos silenciosamente.</p></div>
+                <div class="card"><h3>Livrarias</h3><p class="subtle">Conhecimento — e alguns segredos impressos.</p></div>
+                <div class="card"><h3>Parques</h3><p class="subtle">Passeios elegantes sob as árvores de Paris.</p></div>
+            </div>
+            <p class="subtle center" style="margin-top:40px;">Mapa ilustrado da cidade em produção — os estabelecimentos acima serão substituídos por um mapa interativo assim que a arte estiver pronta.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div>Grand Hôtel Lumière — Paris, 1850</div>
+    <div class="site-credito">Site desenvolvido por Powder Design</div>
+</footer>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/conteudo.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#CCAB6C" stroke-width="1.5" />
+  <circle cx="100" cy="100" r="58" fill="none" stroke="#CCAB6C" stroke-width="1" stroke-dasharray="2 6" />
+  <text x="100" y="107" font-family="Cinzel, Georgia, serif" font-size="20" letter-spacing="3" fill="#CCAB6C" text-anchor="middle">GHL</text>
+</svg>

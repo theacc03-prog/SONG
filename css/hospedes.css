@@ -1,0 +1,311 @@
+/* =========================
+   GRID DE DOSSIÊS
+========================= */
+
+.dossie-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.dossie-card {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.dossie-card:hover {
+    transform: translateY(-4px);
+}
+
+.dossie-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dourado);
+    margin-bottom: 14px;
+}
+
+.dossie-titulo {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+}
+
+.dossie-nome {
+    margin-bottom: 14px;
+}
+
+.dossie-foto {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--dourado);
+    box-shadow: 0 0 0 4px rgba(176, 129, 69, 0.15);
+    margin: 0 auto 18px;
+    display: block;
+    background: var(--marfim-suave);
+}
+
+.dossie-info {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 20px;
+}
+
+.dossie-info-label {
+    display: block;
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+    margin-bottom: 3px;
+}
+
+.dossie-info-valor {
+    font-size: 0.95rem;
+}
+
+.dossie-abrir {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+/* =========================
+   MEDIDOR DE PRESTIGIO
+========================= */
+
+.prestigio-gauge {
+    text-align: left;
+    margin: 14px 0 4px;
+}
+
+.prestigio-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.prestigio-titulo { color: var(--azul-frances); }
+.prestigio-num { color: var(--dourado); font-weight: 700; }
+
+.prestigio-barra {
+    position: relative;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--marrom-escuro) 0%, var(--azul-frances) 50%, var(--dourado) 100%);
+    margin-bottom: 6px;
+}
+
+.prestigio-marcador {
+    position: absolute;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    background: url("../assets/img/indicador.png") no-repeat center / contain;
+    transform: translate(-50%, -55%);
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+}
+
+.prestigio-extremos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.62rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--tinta-suave);
+}
+
+.prestigio-atual {
+    color: var(--dourado);
+    font-weight: 700;
+}
+
+/* =========================
+   MODAL DE DOSSIE
+========================= */
+
+.dossie-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(25, 34, 51, 0.72);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 18px;
+    overflow-y: auto;
+}
+
+.dossie-modal {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    background: var(--marfim);
+    border: 1px solid rgba(176, 129, 69, 0.5);
+    box-shadow: var(--sombra);
+    padding: 44px 32px 36px;
+}
+
+.dossie-modal-fechar {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(176, 129, 69, 0.5);
+    background: none;
+    color: var(--tinta);
+    font-size: 1.1rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.dossie-modal-cabecalho {
+    text-align: center;
+    padding-bottom: 22px;
+    border-bottom: 3px double var(--marrom-escuro);
+    margin-bottom: 26px;
+}
+
+.dossie-modal-tag {
+    display: inline-block;
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--marfim);
+    background: var(--azul-frances);
+    padding: 4px 10px;
+    margin-bottom: 14px;
+}
+
+.dossie-modal-foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--dourado);
+    box-shadow: 0 0 0 6px rgba(176, 129, 69, 0.15);
+    margin: 18px auto 0;
+    display: block;
+    background: var(--marfim-suave);
+}
+
+.dossie-tabs {
+    display: flex;
+    margin-bottom: 22px;
+    border: 1px solid rgba(176, 129, 69, 0.4);
+}
+
+.dossie-tab {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: transparent;
+    color: var(--tinta-suave);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dossie-tab.active {
+    background: var(--azul-frances);
+    color: var(--marfim);
+}
+
+.dossie-tab-painel { display: none; }
+.dossie-tab-painel.active { display: block; }
+
+.dossie-campos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.dossie-campo-label {
+    display: block;
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--azul-frances);
+    border-left: 2px solid var(--dourado);
+    padding-left: 8px;
+    margin-bottom: 4px;
+}
+
+.dossie-campo-valor {
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.dossie-opiniao {
+    border: 1px dashed rgba(176, 129, 69, 0.5);
+    padding: 18px 20px;
+    font-style: italic;
+    color: var(--tinta-suave);
+    text-align: center;
+}
+
+.dossie-opiniao-label {
+    display: block;
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-style: normal;
+    color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+.cronica-item {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(176, 129, 69, 0.25);
+}
+
+.cronica-item:last-child { border-bottom: none; }
+
+.cronica-pontos {
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.cronica-pontos.positivo { color: var(--azul-frances); }
+.cronica-pontos.negativo { color: var(--marrom-escuro); }
+
+.cronica-motivo { margin: 4px 0 0; }
+
+.cronica-vazio {
+    text-align: center;
+    color: var(--tinta-suave);
+    padding: 20px 0;
+}
+
+.dossie-editar-btn {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+}

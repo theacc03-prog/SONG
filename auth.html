@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entrar | Grand Hôtel Lumière</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&family=Old+Standard+TT&family=Marcellus&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="nav-bar">
+        <div class="nav-brand">
+            <img src="assets/img/logo-dourado.png" alt="Grand Hôtel Lumière" style="height:34px;">
+        </div>
+        <nav class="nav-links" id="nav-links">
+            <a href="index.html">Início</a>
+            <a href="hotel.html">Hotel</a>
+            <a href="paris.html">Paris</a>
+            <a href="mercado.html">Mercado</a>
+            <a href="jornal.html">Jornal</a>
+            <a href="funcionamento.html">Funcionamento</a>
+            <a href="hospedes.html">Hóspedes</a>
+            <a href="admin.html" id="nav-admin-link" class="hidden">Admin</a>
+        </nav>
+        <div style="display:flex; align-items:center; gap:14px;">
+            <button class="nav-account" id="nav-account">Entrar</button>
+            <button class="nav-toggle" id="nav-toggle">Menu</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <span class="script">Recepção</span>
+        <h1>Identifique-se</h1>
+        <p data-edit-key="auth-subtitulo">Hóspedes registrados podem acompanhar seu saldo e participar do Mercado do hotel.</p>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="grid" style="max-width:820px; margin:0 auto;">
+
+                <div class="card ornate-frame" id="login-box">
+                    <span class="corner-bl"></span><span class="corner-br"></span>
+                    <h3>Entrar</h3>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com">
+                    <label for="pass">Senha</label>
+                    <input type="password" id="pass" placeholder="••••••••">
+                    <button class="btn form-wide" onclick="window.authSystem.login()">Entrar</button>
+                </div>
+
+                <div class="card ornate-frame" id="register-box">
+                    <span class="corner-bl"></span><span class="corner-br"></span>
+                    <h3>Registrar-se</h3>
+                    <label for="reg-name">Nome do hóspede</label>
+                    <input type="text" id="reg-name" placeholder="Nome completo">
+                    <label for="reg-email">E-mail</label>
+                    <input type="email" id="reg-email" placeholder="seu@email.com">
+                    <label for="reg-pass">Senha</label>
+                    <input type="password" id="reg-pass" placeholder="••••••••">
+                    <button class="btn form-wide" onclick="window.authSystem.register()">Registrar</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div>Grand Hôtel Lumière — Paris, 1850</div>
+    <div class="site-credito">Site desenvolvido por Powder Design</div>
+</footer>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/auth.js"></script>
+<script type="module" src="js/conteudo.js"></script>
+<script src="js/nav.js"></script>
+
+</body>
+</html>

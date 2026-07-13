@@ -1,0 +1,64 @@
+.jornal-paper {
+    max-width: var(--largura-conteudo);
+    margin: 64px auto;
+    background: var(--marfim);
+    box-shadow: var(--sombra);
+    border: 1px solid rgba(176, 129, 69, 0.35);
+}
+
+.jornal-masthead {
+    text-align: center;
+    padding: 34px 24px 30px;
+    border-bottom: 3px double var(--tinta);
+}
+
+.jornal-masthead h1 {
+    font-family: var(--fonte-jornal);
+    font-size: 3rem;
+    letter-spacing: 4px;
+}
+
+.jornal-masthead .subtle { font-family: var(--fonte-jornal); letter-spacing: 3px; }
+
+.jornal-grid {
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    border-top: 1px solid rgba(43, 32, 21, 0.25);
+    border-left: 1px solid rgba(43, 32, 21, 0.25);
+}
+
+.jornal-item {
+    border-right: 1px solid rgba(43, 32, 21, 0.25);
+    border-bottom: 1px solid rgba(43, 32, 21, 0.25);
+    padding: 28px;
+}
+
+.jornal-item .categoria {
+    font-family: var(--fonte-plaqueta);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--azul-frances);
+}
+
+.jornal-item h3 {
+    font-family: var(--fonte-jornal);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.jornal-item .corpo {
+    font-family: var(--fonte-jornal);
+    color: var(--tinta-suave);
+}
+
+.jornal-item .meta {
+    margin-top: 14px;
+    font-size: 0.8rem;
+    color: var(--tinta-suave);
+    font-style: italic;
+}
+

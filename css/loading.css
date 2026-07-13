@@ -1,0 +1,57 @@
+#loading-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    /* mesma cor de fundo do vídeo, pra ele parecer sem bordas, como um GIF */
+    background: #E2E2E0;
+    transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+
+#loading-screen video {
+    width: min(360px, 60vw);
+    height: auto;
+}
+
+#loading-screen .loading-title {
+    font-family: var(--fonte-plaqueta);
+    letter-spacing: 5px;
+    font-size: 0.85rem;
+    color: var(--marrom-escuro);
+    text-transform: uppercase;
+}
+
+#loading-screen .loading-phrase {
+    min-height: 1.4em;
+    font-family: var(--fonte-corpo);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--tinta-suave);
+    letter-spacing: 0.5px;
+}
+
+#loading-screen .loading-phrase::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 1em;
+    margin-left: 3px;
+    background: var(--dourado);
+    vertical-align: -0.15em;
+    animation: loading-cursor-blink 0.8s step-end infinite;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@keyframes loading-cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

@@ -1,0 +1,30 @@
+:root {
+    /* paleta — Belle Époque, Paris 1850 */
+    --marfim: #F3E9D2;
+    --marfim-suave: #EADFC4;
+    --azul-frances: #123A6B;
+    --azul-secundario: #20548E;
+    --azul-marinho: #192233;
+    --dourado: #B08145;
+    --dourado-claro: #D2B37C;
+    --marrom-escuro: #342217;
+    --tinta: #342217;
+    --tinta-suave: rgba(52, 34, 23, 0.7);
+    --tinta-clara: rgba(243, 233, 210, 0.75);
+
+    /* tipografia */
+    --fonte-plaqueta: 'Cinzel', Georgia, serif;
+    --fonte-corpo: 'Cormorant Garamond', Georgia, serif;
+    --fonte-script: 'Pinyon Script', cursive;
+    --fonte-jornal: 'Old Standard TT', Georgia, serif;
+    --fonte-marca: 'Marcellus', Georgia, serif;
+
+    /* layout */
+    --largura-conteudo: 1100px;
+    --raio: 2px;
+    --sombra: 0 18px 50px rgba(43, 32, 21, 0.18);
+
+    /* ornamento de canto (scrollwork dourado, arte fornecida) */
+    --ornamento-canto: url("../assets/img/borda.png");
+    --divisor-img: url("../assets/img/divisor.png");
+}

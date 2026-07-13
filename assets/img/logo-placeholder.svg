@@ -1,0 +1,13 @@
+<svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .word { font-family: 'Cinzel', Georgia, serif; fill: #CCAB6C; text-anchor: middle; }
+      .line { stroke: #CCAB6C; stroke-width: 1.5; fill: none; }
+    </style>
+  </defs>
+  <line class="line" x1="60" y1="70" x2="240" y2="70" />
+  <line class="line" x1="400" y1="70" x2="580" y2="70" />
+  <circle class="line" cx="320" cy="70" r="6" />
+  <text class="word" x="320" y="120" font-size="46" letter-spacing="6">GRAND HÔTEL</text>
+  <text class="word" x="320" y="175" font-size="46" letter-spacing="10">LUMIÈRE</text>
+</svg>
